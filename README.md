@@ -9,7 +9,11 @@
 [![NetworkX](https://img.shields.io/badge/Graph_Engine-NetworkX%20%7C%20SciPy-990000?style=for-the-badge&logo=python)](https://networkx.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.style=for-the-badge)](#license)
 
----
+<br/>
+
+![Abuse-Ring Sentinel AI Risk Intelligence Platform UI Dashboard](docs/assets/hero_dashboard.jpg)
+
+<br/>
 
 <p align="center">
   <b>Abuse-Ring Sentinel</b> is an enterprise-grade AI risk intelligence platform built to expose coordinated fake-account networks, promotional abuse syndicates, and financial transaction fraud rings using multi-entity similarity graphs and transparent, explainable AI heuristics.
@@ -20,6 +24,8 @@
 ---
 
 ## 🌟 Key Highlights
+
+![Multi-Entity AI Risk Network Graph Clustering Visualization](docs/assets/graph_nodes.jpg)
 
 - 💎 **Obsidian Glassmorphism UX**: Crystal-clear frosted glass interface designed for security analysts and risk operations teams.
 - 🕸️ **D3 & NetworkX Graph Engine**: Dynamic 2D force graph visualization with PageRank & Degree Centrality graph algorithms.
