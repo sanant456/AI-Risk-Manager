@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+dist/
+.vite/
+*.log
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Databases & local downloads
+*.db
+sentinel.db
+kaggle_ieee_sample.csv
+
+# IDE & OS files
+.DS_Store
+.vscode/
+.idea/

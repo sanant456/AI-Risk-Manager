@@ -1,0 +1,318 @@
+{
+  "default_threshold": 0.4,
+  "metrics": {
+    "precision": 1.0,
+    "recall": 0.8667,
+    "f1": 0.9286,
+    "tp": 26,
+    "fp": 0,
+    "fn": 4,
+    "tn": 401,
+    "total_flagged": 26,
+    "total_abuse": 30,
+    "total_innocent": 401
+  },
+  "exceptions": {
+    "false_positive": {
+      "cluster_id": "cluster-007",
+      "members": [
+        "acc-619d5d7f92",
+        "acc-813231546a",
+        "acc-f3d538912b"
+      ],
+      "score": 0.1875,
+      "reasons": [
+        "Shared IP address (100% of members)",
+        "Shared physical address (100% of members)"
+      ],
+      "explanation": "This cluster of 3 accounts scored 0.19 \u2014 just below the flagging threshold. If the threshold were lowered, it would be incorrectly flagged. These accounts share shared ip address (100% of members); shared physical address (100% of members), which is consistent with a real household sharing a home router. This illustrates the false-positive cost of aggressive thresholds."
+    },
+    "false_negative": {
+      "ring_id": "ring-02",
+      "total_members": 4,
+      "missed_members": [
+        "acc-2379c8ed45",
+        "acc-121f4f727b",
+        "acc-aae8ba231e",
+        "acc-9118648a1d"
+      ],
+      "missed_count": 4,
+      "explanation": "Ring 'ring-02' has 4 members, but 4 were not flagged (cluster score=0.35). This likely happened because one or more members used evasion tactics (different device/IP), reducing the cluster's sharing ratio below the detection threshold. The ring members who used distinct devices successfully lowered the overall signal strength."
+    }
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.1,
+      "precision": 0.6977,
+      "recall": 1.0,
+      "f1": 0.8219,
+      "tp": 30,
+      "fp": 13,
+      "fn": 0,
+      "tn": 388,
+      "total_flagged": 43,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.15,
+      "precision": 0.6977,
+      "recall": 1.0,
+      "f1": 0.8219,
+      "tp": 30,
+      "fp": 13,
+      "fn": 0,
+      "tn": 388,
+      "total_flagged": 43,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "tn": 401,
+      "total_flagged": 30,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.25,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "tn": 401,
+      "total_flagged": 30,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "tn": 401,
+      "total_flagged": 30,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.35,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "tn": 401,
+      "total_flagged": 30,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.4,
+      "precision": 1.0,
+      "recall": 0.8667,
+      "f1": 0.9286,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 401,
+      "total_flagged": 26,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.45,
+      "precision": 1.0,
+      "recall": 0.8667,
+      "f1": 0.9286,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 401,
+      "total_flagged": 26,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.5,
+      "precision": 1.0,
+      "recall": 0.8667,
+      "f1": 0.9286,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 401,
+      "total_flagged": 26,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.55,
+      "precision": 1.0,
+      "recall": 0.8667,
+      "f1": 0.9286,
+      "tp": 26,
+      "fp": 0,
+      "fn": 4,
+      "tn": 401,
+      "total_flagged": 26,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.6,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "tp": 15,
+      "fp": 0,
+      "fn": 15,
+      "tn": 401,
+      "total_flagged": 15,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.65,
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "tp": 10,
+      "fp": 0,
+      "fn": 20,
+      "tn": 401,
+      "total_flagged": 10,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.7,
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "tp": 10,
+      "fp": 0,
+      "fn": 20,
+      "tn": 401,
+      "total_flagged": 10,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.75,
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "tp": 10,
+      "fp": 0,
+      "fn": 20,
+      "tn": 401,
+      "total_flagged": 10,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "tp": 10,
+      "fp": 0,
+      "fn": 20,
+      "tn": 401,
+      "total_flagged": 10,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.85,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 30,
+      "tn": 401,
+      "total_flagged": 0,
+      "total_abuse": 30,
+      "total_innocent": 401
+    },
+    {
+      "threshold": 0.9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 30,
+      "tn": 401,
+      "total_flagged": 0,
+      "total_abuse": 30,
+      "total_innocent": 401
+    }
+  ],
+  "dataset_stats": {
+    "total_accounts": 431,
+    "num_rings": 6,
+    "ring_details": [
+      {
+        "ring_id": "ring-01",
+        "size": 3
+      },
+      {
+        "ring_id": "ring-02",
+        "size": 4
+      },
+      {
+        "ring_id": "ring-03",
+        "size": 7
+      },
+      {
+        "ring_id": "ring-04",
+        "size": 7
+      },
+      {
+        "ring_id": "ring-05",
+        "size": 4
+      },
+      {
+        "ring_id": "ring-06",
+        "size": 5
+      }
+    ],
+    "num_households": 4,
+    "household_details": [
+      {
+        "cluster_id": "household-01",
+        "size": 3
+      },
+      {
+        "cluster_id": "household-02",
+        "size": 3
+      },
+      {
+        "cluster_id": "household-03",
+        "size": 3
+      },
+      {
+        "cluster_id": "household-04",
+        "size": 4
+      }
+    ],
+    "noise_accounts": 388,
+    "abuse_accounts": 30,
+    "innocent_accounts": 401
+  }
+}
