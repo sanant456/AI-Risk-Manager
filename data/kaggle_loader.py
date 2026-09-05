@@ -116,6 +116,22 @@ def load_kaggle_as_abuse_rings(seed: int = 42) -> dict:
 
         num_rings = len(ring_map)
         abuse_accounts = sum(1 for v in ground_truth.values() if v is not None)
+        
+        stats = {
+            "dataset_source": "Kaggle IEEE-CIS Financial Fraud (500 Transactions)",
+            "total_accounts": len(accounts),
+            "num_rings": num_rings,
+            "abuse_accounts": abuse_accounts,
+            "innocent_accounts": len(accounts) - abuse_accounts,
+            "total_legitimate": len(accounts) - abuse_accounts,
+            "total_rings": num_rings,
+        }
+        return {
+            "accounts": accounts,
+            "ground_truth": ground_truth,
+            "stats": stats,
+        }
+
     else:
         from data.generate import generate_dataset
         ds = generate_dataset(seed=seed)
