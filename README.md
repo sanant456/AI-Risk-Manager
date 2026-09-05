@@ -165,9 +165,3 @@ Open **`http://localhost:5173`** in your browser.
 ## 📜 License
 
 Distributed under the **MIT License**. See `LICENSE` for more details.
-
----
-
-<div align="center">
-  <sub>Built with ❤️ by DeepMind Pair Programmer for Antigravity AI Risk Intelligence.</sub>
-</div>
