@@ -8,7 +8,7 @@
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%7C%20Python-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![SQLite](https://img.shields.io/badge/Database-SQLite3-003B57?style=for-the-badge&logo=sqlite)](https://www.sqlite.org/)
 [![NetworkX](https://img.shields.io/badge/Graph_Engine-NetworkX%20%7C%20SciPy-990000?style=for-the-badge&logo=python)](https://networkx.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.style=for-the-badge)](#license)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](#license)
 
 <br/>
 
