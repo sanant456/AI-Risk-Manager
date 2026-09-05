@@ -3,7 +3,7 @@
 # 🛡️ ABUSE-RING SENTINEL
 ### *AI-Powered Multi-Entity Risk Intelligence & Coordinated Fraud Ring Detection Engine*
 
-[![Live Demo](https://img.shields.io/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-risk-manager-coral.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-risk-manager-three.vercel.app)
 [![React](https://img.shields.io/badge/Frontend-React%20%7C%20Vite%20%7C%20D3.js-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%7C%20Python-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![SQLite](https://img.shields.io/badge/Database-SQLite3-003B57?style=for-the-badge&logo=sqlite)](https://www.sqlite.org/)
@@ -12,7 +12,7 @@
 
 <br/>
 
-### 🌐 Live Demo: [https://ai-risk-manager-coral.vercel.app](https://ai-risk-manager-coral.vercel.app)
+### 🌐 Live Demo: [https://ai-risk-manager-three.vercel.app](https://ai-risk-manager-three.vercel.app)
 
 <br/>
 
