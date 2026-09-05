@@ -8,7 +8,12 @@ import json
 import os
 from pathlib import Path
 
-DB_PATH = os.path.join(Path(__file__).parent, "sentinel.db")
+# Use /tmp directory on Vercel serverless / read-only filesystems
+if os.environ.get("VERCEL") or not os.access(Path(__file__).parent, os.W_OK):
+    DB_PATH = "/tmp/sentinel.db"
+else:
+    DB_PATH = os.path.join(Path(__file__).parent, "sentinel.db")
+
 
 
 def get_db_connection():

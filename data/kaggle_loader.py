@@ -21,7 +21,11 @@ def download_or_load_kaggle_dataset(data_dir: str = None) -> list:
     if data_dir is None:
         data_dir = str(Path(__file__).parent)
     
-    cache_path = os.path.join(data_dir, "kaggle_ieee_sample.csv")
+    if os.environ.get("VERCEL") or not os.access(data_dir, os.W_OK):
+        cache_path = "/tmp/kaggle_ieee_sample.csv"
+    else:
+        cache_path = os.path.join(data_dir, "kaggle_ieee_sample.csv")
+
     
     if not os.path.exists(cache_path):
         print("Downloading Kaggle IEEE-CIS Fraud Detection dataset sample...")

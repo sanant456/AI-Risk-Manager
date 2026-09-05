@@ -81,9 +81,13 @@ def generate(req: GenerateRequest = None):
     state["ground_truth"] = dataset["ground_truth"]
     state["dataset_stats"] = dataset["stats"]
     
-    # Save to SQLite Database
-    from data.db import save_dataset_to_db
-    save_dataset_to_db(dataset["accounts"], dataset["ground_truth"])
+    # Save to SQLite Database (safe for serverless)
+    try:
+        from data.db import save_dataset_to_db
+        save_dataset_to_db(dataset["accounts"], dataset["ground_truth"])
+    except Exception as e:
+        print(f"DB save warning: {e}")
+
 
     # Reset pipeline results
     state["pipeline_result"] = None
@@ -116,9 +120,13 @@ def detect(req: DetectRequest = None):
     metrics = compute_metrics(result["flagged"], state["ground_truth"], all_ids)
     state["metrics"] = metrics
 
-    # Log to SQLite Database
-    from data.db import log_detection_run
-    log_detection_run(threshold, metrics, result)
+    # Log to SQLite Database (safe for serverless)
+    try:
+        from data.db import log_detection_run
+        log_detection_run(threshold, metrics, result)
+    except Exception as e:
+        print(f"DB log warning: {e}")
+
 
     # Find exceptions
     exceptions = find_exceptions(result["flagged"], result["cleared"], state["ground_truth"])
